@@ -2,6 +2,20 @@
 
 set -o errexit -o nounset -o pipefail
 
+# [DEPRECATED]:
+#
+# Use "git-summary" instead
+#
+# - This will reset all commits on the current branch that aren't in main
+# - The goal was to mimic "preparing to merge" by pseudo-rebasing the branch down to 1 commit
+# - After using this for a while, it doesn't handle a lot of cases well (e.g. merge commits)
+#
+# - I've realized there are better pre-existing alternatives:
+#   - git rebase --interactive main
+#   - git history reword|split
+#
+# - This is deprecated and shouldn't be used until the outstanding issues are fixed
+
 prepped_commits='.git/PREP_COMMITS'
 prepped_template='.git/PREP_TEMPLATE'
 

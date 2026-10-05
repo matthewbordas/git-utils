@@ -6,12 +6,11 @@ set -o errexit -o nounset -o pipefail
 #
 # - Your feature branch must be rebased on main prior
 # - "ff-only" will reject the merge if not
-# - `git merge -ff-only --squash <feature_branch>`
+# - `git merge --ff-only --squash <feature_branch>`
 # - Index has staged, but uncommitted changes
 # - To summarize them, you then run:
 # - `git summary`
 # - It will output a summary that you can then use to write your commit message
-#
 
 summary='.git/summary'
 
