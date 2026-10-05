@@ -11,7 +11,6 @@ set -o errexit -o nounset -o pipefail
 # - To summarize them, you then run:
 # - `git summary`
 # - It will output a summary that you can then use to write your commit message
-#
 
 summary='.git/summary'
 
